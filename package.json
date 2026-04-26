@@ -1,0 +1,16 @@
+{
+  "name": "budgetro",
+  "private": true,
+  "version": "1.0.0",
+  "description": "my project",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "author": {
+    "name": "karen",
+    "email": "karenhester5@gmail.com"
+  },
+  "license": "ISC",
+  "type": "module"
+}

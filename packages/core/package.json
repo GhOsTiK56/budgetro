@@ -1,0 +1,23 @@
+{
+  "name": "@ghostik/core",
+  "version": "1.0.6",
+  "description": "Core utilities and shared setup",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "karen",
+    "email": "karenhester5@gmail.com"
+  },
+  "license": "ISC",
+  "type": "module",
+  "peerDependencies": {
+    "prettier": "^3.0.0"
+  },
+  "dependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2"
+  },
+  "exports": {
+    "prettier": "./src/prettier.config.mjs"
+  }
+}

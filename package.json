@@ -12,5 +12,8 @@
     "email": "karenhester5@gmail.com"
   },
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "ts-proto": "^2.11.8"
+  }
 }

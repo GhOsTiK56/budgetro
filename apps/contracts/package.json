@@ -1,5 +1,5 @@
 {
-  "name": "@budgetro/contracts",
+  "name": "@ghostik/contracts",
   "version": "1.0.0",
   "description": "Protobuf definitions and generated TypeScript types",
   "scripts": {

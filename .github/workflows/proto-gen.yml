@@ -9,7 +9,7 @@ on:
 
 jobs:
     publish:
-        name: Publish job
+        name: Publish job proto-gen
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository
@@ -28,7 +28,7 @@ jobs:
               run: sudo apt-get update && sudo apt-get install -y protobuf-compiler
 
             - name: Generate TS Protobuf
-              run: npm run proto:gen -w @budgetro/contracts
+              run: npm run proto:gen -w @ghostik/contracts
 
             - name: Publish package
               working-directory: apps/contracts

@@ -1,7 +1,7 @@
 {
   "name": "@ghostik/contracts",
   "version": "1.0.0",
-  "description": "Protobuf definitions and generated TypeScript types",
+  "description": "Protobuf definitions and generated TypeScript types ",
   "scripts": {
     "proto:gen": "protoc -I ./proto ./proto/*.proto --ts_proto_out=./gen --ts_proto_opt=nestJs=true,package=omit"
   },

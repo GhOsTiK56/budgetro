@@ -9,7 +9,7 @@ on:
 
 jobs:
     publish:
-        name: Publish job
+        name: Publish job proto-gen
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository

@@ -1,5 +1,5 @@
 {
-  "name": "auth-service",
+  "name": "@ghostik/auth-service",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -20,9 +20,11 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@ghostik/contracts": "^1.0.0",
     "@ghostik/core": "^1.0.10",
     "@nestjs/common": "^11.0.1",
     "@nestjs/core": "^11.0.1",
+    "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^11.0.1",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"

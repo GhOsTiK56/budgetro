@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/core/routing/router.dart';
-import 'package:mobile/core/theme/app_theme.dart';
+import 'package:budgetro/core/routing/router.dart';
+import 'package:budgetro/core/theme/app_theme.dart';
 
 class ExpenseTrackerApp extends StatelessWidget {
   const ExpenseTrackerApp({super.key});
@@ -13,7 +13,7 @@ class ExpenseTrackerApp extends StatelessWidget {
 
       // Theme
       theme: AppTheme.lightTheme,
-      //darkTheme: AppTheme.darkTheme,
+      darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
 
       // Navigation

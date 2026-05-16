@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:mobile/core/routing/rout_names.dart';
+import 'package:budgetro/core/routing/rout_names.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -16,7 +16,7 @@ class _SplashPageState extends State<SplashPage> {
 
     Future.delayed(const Duration(seconds: 2), () {
       if (!mounted) return;
-      context.go(Routes.login);
+      context.go(Routes.signUp);
     });
   }
 

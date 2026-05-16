@@ -1,0 +1,51 @@
+{
+  "@@locale": "en",
+  "signUpPage": "Sign Up Page",
+  "@signUpPage": {},
+  "firstName": "First Name",
+  "@firstName": {},
+  "firstNameHint": "Enter First Name",
+  "@firstNameHint": {},
+  "lastName": "Last Name",
+  "@lastName": {},
+  "lastNameHint": "Enter Last Name",
+  "@lastNameHint": {},
+  "email": "Email",
+  "@email": {},
+  "emailHint": "Enter Email Adress",
+  "@emailHint": {},
+  "password": "Password",
+  "@password": {},
+  "passwordHint": "Enter Password",
+  "@passwordHint": {},
+  "fieldRequired": "{fieldName} is required",
+  "@fieldRequired": {
+    "description": "Generic validation message for required fields",
+    "placeholders": {
+      "fieldName": {
+        "type": "String",
+        "example": "First name"
+      }
+    }
+  },
+  "fieldTooShort": "{fieldName} must contain at least 2 characters",
+  "@fieldTooShort": {
+    "description": "Generic validation message for minimum length",
+    "placeholders": {
+      "fieldName": {
+        "type": "String",
+        "example": "First Name"
+      }
+    }
+  },
+  "nameLettersOnly": "{fieldName} must contain only letters",
+  "@nameLettersOnly": {
+    "description": "Generic validation message for only letters support",
+    "placeholders": {
+      "fieldName": {
+        "type": "String",
+        "example": "First Name"
+      }
+    }
+  }
+}

@@ -8,7 +8,7 @@ class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
       useMaterial3: true,
-      scaffoldBackgroundColor: AppColors.backgroundLight
+      scaffoldBackgroundColor: AppColors.backgroundLight,
     );
   }
 
@@ -16,7 +16,11 @@ class AppTheme {
   static ThemeData get darkTheme {
     return ThemeData(
       useMaterial3: true,
-      scaffoldBackgroundColor: AppColors.backgroundDark
+      scaffoldBackgroundColor: AppColors.backgroundDark,
     );
+  }
+
+  static OutlineInputBorder get outlineInputBorder {
+    return OutlineInputBorder(borderRadius: BorderRadius.circular(10));
   }
 }

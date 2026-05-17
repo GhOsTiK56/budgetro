@@ -12,6 +12,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get signUpPage => 'Sign Up Page';
 
   @override
+  String get loginPage => 'Login Page';
+
+  @override
+  String get signUp => 'Sign Up';
+
+  @override
+  String get login => 'Login';
+
+  @override
   String get firstName => 'First Name';
 
   @override
@@ -41,12 +50,15 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String fieldTooShort(String fieldName) {
-    return '$fieldName must contain at least 2 characters';
+  String fieldTooShort(String fieldName, int charactersContains) {
+    return '$fieldName must contain at least $charactersContains characters';
   }
 
   @override
   String nameLettersOnly(String fieldName) {
     return '$fieldName must contain only letters';
   }
+
+  @override
+  String get emailInvalid => 'Please enter a valid Email adress';
 }

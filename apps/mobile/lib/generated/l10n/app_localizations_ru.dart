@@ -12,6 +12,15 @@ class AppLocalizationsRu extends AppLocalizations {
   String get signUpPage => 'Страница Регистрации';
 
   @override
+  String get loginPage => 'Login Page';
+
+  @override
+  String get signUp => 'Зарегистрироваться';
+
+  @override
+  String get login => 'Login';
+
+  @override
   String get firstName => 'Имя';
 
   @override
@@ -41,12 +50,15 @@ class AppLocalizationsRu extends AppLocalizations {
   }
 
   @override
-  String fieldTooShort(String fieldName) {
-    return 'Поле $fieldName должно содержать как минимум 2 символа';
+  String fieldTooShort(String fieldName, int charactersContains) {
+    return 'Поле должно содержать как минимум 2 символа';
   }
 
   @override
   String nameLettersOnly(String fieldName) {
-    return 'Поле $fieldName должно содержать только буквы';
+    return 'Поле должно содержать только буквы';
   }
+
+  @override
+  String get emailInvalid => 'Please enter a valid Email adress';
 }

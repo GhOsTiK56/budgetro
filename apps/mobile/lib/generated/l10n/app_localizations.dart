@@ -104,6 +104,24 @@ abstract class AppLocalizations {
   /// **'Sign Up Page'**
   String get signUpPage;
 
+  /// No description provided for @loginPage.
+  ///
+  /// In en, this message translates to:
+  /// **'Login Page'**
+  String get loginPage;
+
+  /// No description provided for @signUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign Up'**
+  String get signUp;
+
+  /// No description provided for @login.
+  ///
+  /// In en, this message translates to:
+  /// **'Login'**
+  String get login;
+
   /// No description provided for @firstName.
   ///
   /// In en, this message translates to:
@@ -161,14 +179,20 @@ abstract class AppLocalizations {
   /// Generic validation message for minimum length
   ///
   /// In en, this message translates to:
-  /// **'{fieldName} must contain at least 2 characters'**
-  String fieldTooShort(String fieldName);
+  /// **'{fieldName} must contain at least {charactersContains} characters'**
+  String fieldTooShort(String fieldName, int charactersContains);
 
   /// Generic validation message for only letters support
   ///
   /// In en, this message translates to:
   /// **'{fieldName} must contain only letters'**
   String nameLettersOnly(String fieldName);
+
+  /// No description provided for @emailInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid Email adress'**
+  String get emailInvalid;
 }
 
 class _AppLocalizationsDelegate

@@ -1,11 +1,15 @@
 import 'dart:developer';
 
 import 'package:budgetro/core/extensions/build_context_extensions.dart';
+import 'package:budgetro/core/routing/rout_names.dart';
 import 'package:budgetro/core/theme/app_text_styles.dart';
 import 'package:budgetro/core/utils/validator_utility.dart';
 import 'package:budgetro/features/auth/presentation/widgets/auth_password_text_field.dart';
 import 'package:budgetro/features/auth/presentation/widgets/auth_text_field.dart';
+import 'package:budgetro/features/auth/presentation/widgets/action_button.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -29,6 +33,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
   @override
   void dispose() {
+    // TODO Добавить смену Email на телефон
     _firstNameController.dispose();
     _lastNameController.dispose();
     _emailController.dispose();
@@ -38,7 +43,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
   void _handleSignUp() {
     final isValid = _formKey.currentState!.validate();
-    if (!isValid) return ;
+    if (!isValid) return;
 
     log(
       '${_firstNameController.text} '
@@ -64,7 +69,6 @@ class _SignUpPageState extends State<SignUpPage> {
                 Form(
                   key: _formKey,
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       // First Name Text Field
                       AuthTextField(
@@ -106,8 +110,11 @@ class _SignUpPageState extends State<SignUpPage> {
                         prefixIcon: Icons.alternate_email,
                         keyboardType: TextInputType.emailAddress,
                         textInputAction: TextInputAction.next,
-                        validator: (value) =>
-                            ValidatorUtility.validateEmail(value, context),
+                        validator: (value) => ValidatorUtility.validateEmail(
+                          value,
+                          context.l10n.email,
+                          context,
+                        ),
                       ),
                       const SizedBox(height: 20),
 
@@ -119,8 +126,39 @@ class _SignUpPageState extends State<SignUpPage> {
                         prefixIcon: Icons.password,
                         textInputAction: TextInputAction.done,
                         onFieldSubmitted: (_) => _handleSignUp(),
-                        validator: (value) =>
-                            ValidatorUtility.validatePassword(value, context),
+                        validator: (value) => ValidatorUtility.validatePassword(
+                          value,
+                          context.l10n.password,
+                          context,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+
+                      // Confirm Button & To Login
+                      ActionButton(
+                        text: context.l10n.signUp,
+                        onPressed: _handleSignUp,
+                      ),
+                      const SizedBox(height: 20),
+
+                      // Button to Login
+                      RichText(
+                        text: TextSpan(
+                          text: 'Already have an account? ',
+                          style: AppTextStyles.textSpanStyle,
+                          children: [
+                            TextSpan(
+                              text: 'Login',
+                              style: AppTextStyles.textSpanStyle.copyWith(
+                                fontWeight: FontWeight.bold,
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () {
+                                  context.go(Routes.login);
+                                },
+                            ),
+                          ],
+                        ),
                       ),
                       const SizedBox(height: 20),
                     ],

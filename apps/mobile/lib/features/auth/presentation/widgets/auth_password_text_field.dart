@@ -32,12 +32,13 @@ class _AuthPasswordTextFieldState extends State<AuthPasswordTextField> {
       controller: widget.controller,
       textInputAction: widget.textInputAction,
       onFieldSubmitted: widget.onFieldSubmitted,
+      validator: widget.validator,
       decoration: InputDecoration(
         border: AppTheme.outlineInputBorder,
         labelText: widget.labelText,
         hintText: widget.hintText,
         prefixIcon: Icon(widget.prefixIcon),
-        // TODO Сделать в суффиксе икноку глазика, чтобы можно было переключать видимость пароля
+        // TODO Сделать в суффиксе иконку глазика, чтобы можно было переключать видимость пароля, и добоавить поле obscureText для пароля
       ),
     );
   }

@@ -1,0 +1,16 @@
+{
+  "@@locale": "ru",
+  "signUpPage": "Страница Регистрации",
+  "signUp": "Зарегистрироваться",
+  "firstName": "Имя",
+  "firstNameHint": "Введите Имя",
+  "lastName": "Фамилия",
+  "lastNameHint": "Введите Фамилию",
+  "email": "Почта",
+  "emailHint": "Введите Адрес Эл. Почты",
+  "password": "Пароль",
+  "passwordHint": "Введите Пароль",
+  "fieldRequired": "Требуется ввести поле {fieldName}",
+  "fieldTooShort": "Поле должно содержать как минимум 2 символа",
+  "nameLettersOnly": "Поле должно содержать только буквы"
+}
